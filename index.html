@@ -1,233 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ANNA KARINA FISCHER WOLFF</title>
-
-  <!-- Fuentes modernas estilo dev -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#121820;
-      --card:#1a2330;
-      --text:#c9d1d9;
-      --accent:#58a6ff;
-      --accent2:#1f6feb;
-      --muted:#8b949e;
-      --border:#30363d;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'JetBrains Mono', monospace;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:40px}
-    .container{max-width:1050px;margin:auto;padding:32px}
-
-    /* --- HEADER --- */
-    header{padding:20px 0;display:flex;align-items:center;gap:20px;border-bottom:1px solid var(--border)}
-    .avatar{width:90px;height:90px;border-radius:50%;background:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:32px;color:white;font-weight:700;box-shadow:0 0 14px #1f6febaa;}
-    h1{font-size:28px;margin-bottom:6px;color:var(--accent)}
-    .lead{color:var(--muted);font-size:14px}
-
-    nav{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:7px 12px;border:1px solid var(--accent);border-radius:6px;color:var(--accent);text-decoration:none;font-size:14px;transition:0.2s}
-    .btn:hover{background:var(--accent);color:#fff}
-
-    /* --- CARDS --- */
-    .card{background:var(--card);border:1px solid var(--border);padding:20px;border-radius:10px;margin-top:26px}
-    h2{color:var(--accent);margin-bottom:12px;font-size:22px}
-
-    /* --- GRID PROYECTOS --- */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:20px}
-    .project{padding-bottom:12px}
-
-    .project-image{width:100%;height:170px;background:#0f1625;border:1px solid #222b3c;border-radius:10px;display:flex;align-items:center;justify-content:center}
-    .project-image img{width:80px;height:80px;opacity:0.9}
-
-    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .badge{background:#21262d;padding:6px 10px;border-radius:6px;font-size:12px;color:var(--muted);border:1px solid var(--border)}
-
-    /* FILTROS */
-    .filters{display:flex;gap:10px;margin-top:12px}
-    .filter{padding:6px 14px;border-radius:999px;border:1px solid var(--border);background:#161b22;color:var(--muted);cursor:pointer;transition:0.2s;font-size:13px}
-    .filter.active,.filter:hover{background:var(--accent);color:white;border-color:var(--accent)}
-
-    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px;padding-top:20px;border-top:1px solid var(--border)}
-  </style>
+  <title>FitLife - Mejora tus hábitos</title>
+  <!-- Bootstrap CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
-<div class="container">
 
-  <header>
-    <div class="avatar">DEV</div>
-    <div>
-      <h1>Portafolio de Proyectos </h1>
-      <p class="lead">Full‑Stack Developer · JavaScript · Python · Django · APIs</p>
-      <p class="lead">Diseño moderno, código limpio y soluciones reales.</p>
+  <!-- Navbar fija -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">FitLife</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fs-5">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Características</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#subscribe">Suscripción</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <nav>
-        <a class="btn" href="#proyectos">Proyectos</a>
-        <a class="btn" href="#sobre-mi">Sobre mí</a>
-        <a class="btn" href="#contacto">Contacto</a>
-      </nav>
+  <!-- Hero Header -->
+  <header id="hero" class="bg-light text-dark pt-5" style="padding-top: 6rem;">
+    <div class="container text-center py-5">
+      <h1 class="display-4 fw-bold mb-3">Transforma tu vida con FitLife</h1>
+      <p class="lead mb-4">La app que te ayuda a mejorar tus hábitos de alimentación y ejercicio de forma sencilla y divertida.</p>
+      <a href="#" class="btn btn-primary btn-lg px-4">Descargar la App <i class="bi bi-download ms-2"></i></a>
     </div>
   </header>
 
-<!-- Ilustración desarrollador estilo dev avanzada -->
-<div style="margin:35px 0;padding:25px;background:#16202a;border:1px solid #283647;border-radius:18px;box-shadow:0 0 12px #0b1118;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;align-items:center;">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" style="width:85px;opacity:0.9;">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" style="width:85px;opacity:0.9;">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="width:85px;opacity:0.9;">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="width:85px;opacity:0.9;">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" style="width:85px;opacity:0.9;">
-</div>
-
-  <!-- Ilustración tipo terminal developer -->
-  <div style="width:100%;margin:30px 0;border:1px solid var(--border);border-radius:12px;background:#0f1625;padding:0;overflow:hidden;">
-    <div style="background:#1f2937;color:#9ca3af;padding:8px 12px;font-family:'JetBrains Mono', monospace;font-size:13px;display:flex;align-items:center;gap:6px;">
-      <span style='width:10px;height:10px;background:#ef4444;border-radius:50%;display:inline-block'></span>
-      <span style='width:10px;height:10px;background:#f59e0b;border-radius:50%;display:inline-block'></span>
-      <span style='width:10px;height:10px;background:#10b981;border-radius:50%;display:inline-block'></span>
-      <span style="margin-left:10px">terminal — developer</span>
-    </div>
-    <div style="padding:18px;background:#111827;color:#9ca3af;font-size:14px;font-family:'JetBrains Mono', monospace;white-space:pre-line;">
-      $ npm start
-      ▶ Iniciando servidor...
-      ▶ Cargando portafolio...
-      ▶ Modo desarrollador activo ✔
-    </div>
-  </div>
-
-  <section id="sobre-mi" class="card">
-    <h2>Sobre mí</h2>
-    <p>Soy desarrollador/a especializado/a en la creación de aplicaciones web manteniendo buenas prácticas, arquitectura clara y enfoque en escalabilidad. Trabajo con JavaScript, Python y Django, además de herramientas modernas de bases de datos y APIs.</p>
-
-    <div class="badges" style="margin-top:14px">
-      <span class="badge">JavaScript</span>
-      <span class="badge">Django</span>
-      <span class="badge">Python</span>
-      <span class="badge">HTML/CSS</span>
-      <span class="badge">MySQL</span>
-      <span class="badge">GitHub</span>
+  <!-- Sección de Características -->
+  <section id="features" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Características principales</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <i class="bi bi-bar-chart-line-fill text-primary fs-1 mb-3"></i>
+          <h4>Monitoreo de Progreso</h4>
+          <p>Visualiza tus avances diarios y mantente motivado con reportes claros y detallados.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-basket3-fill text-primary fs-1 mb-3"></i>
+          <h4>Planes de Alimentación</h4>
+          <p>Recibe recomendaciones personalizadas para mejorar tu dieta y hábitos alimenticios.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-heart-pulse-fill text-primary fs-1 mb-3"></i>
+          <h4>Rutinas de Ejercicio</h4>
+          <p>Ejercítate con planes adaptados a tu nivel y gana salud y energía cada día.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="proyectos" class="card" style="border-radius:14px;background:#16202e;box-shadow:0 0 12px #0c1118;">
-    <h2>Proyectos destacados</h2>
-    <p class="lead">Filtra por tecnología:</p>
-
-    <div class="filters">
-      <button class="filter active" data-filter="all">Todos</button>
-      <button class="filter" data-filter="javascript">JavaScript</button>
-      <button class="filter" data-filter="django">Django</button>
-      <button class="filter" data-filter="fullstack">Full‑stack</button>
-    </div>
-
-    <div class="grid dashboard-grid" id="projectGrid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));padding:12px;gap:22px;">
-
-      <article class="card project dashboard-card" style="background:#1c2738;border:1px solid #2d3a4d;padding:22px;border-radius:12px;box-shadow:0 0 8px #0b1118;position:relative;" data-tech="javascript">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-          <h3 style="color:var(--accent);font-size:18px;">Web de Gestión de Desechos</h3>
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" style="width:38px;opacity:0.95;" />
+  <!-- Sección de Testimonios -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Lo que dicen nuestros usuarios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="card-text fst-italic">"FitLife me ha cambiado la manera de ver mi salud. Ahora me siento con más energía y motivación."</p>
+              <h6 class="card-subtitle text-muted text-end">- Ana M.</h6>
+            </div>
+          </div>
         </div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:12px;">SPA con filtros, formularios inteligentes y arquitectura modular.</p>
-
-        <div style="display:flex;gap:10px;margin-bottom:12px;">
-          <span class="badge">JavaScript</span>
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="card-text fst-italic">"Las rutinas son fáciles de seguir y los planes de alimentación realmente funcionan."</p>
+              <h6 class="card-subtitle text-muted text-end">- Carlos R.</h6>
+            </div>
+          </div>
         </div>
-
-        <div style="background:#111a24;border:1px solid #232f3e;border-radius:10px;padding:10px;">
-          <p style="font-size:12px;color:var(--accent);">📊 Métricas:</p>
-          <ul style="font-size:12px;color:var(--muted);padding-left:18px;">
-            <li>Arquitectura modular</li>
-            <li>Optimización 40% en rendimiento</li>
-            <li>Validaciones inteligentes</li>
-          </ul>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="card-text fst-italic">"Recomiendo FitLife a todos mis amigos, es la app que necesitaba para mejorar mi estilo de vida."</p>
+              <h6 class="card-subtitle text-muted text-end">- Lucia G.</h6>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="card project dashboard-card" style="background:#1c2738;border:1px solid #2d3a4d;padding:22px;border-radius:12px;box-shadow:0 0 8px #0b1118;position:relative;" data-tech="django fullstack">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-          <h3 style="color:var(--accent);font-size:18px;">EventManager — Django</h3>
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" style="width:38px;opacity:0.95;" />
-        </div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:12px;">Sistema completo de gestión de eventos con roles, tickets y panel administrador.</p>
-
-        <div style="display:flex;gap:10px;margin-bottom:12px;">
-          <span class="badge">Python</span>
-          <span class="badge">Django</span>
-          <span class="badge">MySQL</span>
-        </div>
-
-        <div style="background:#111a24;border:1px solid #232f3e;border-radius:10px;padding:10px;">
-          <p style="font-size:12px;color:var(--accent);">📊 Métricas:</p>
-          <ul style="font-size:12px;color:var(--muted);padding-left:18px;">
-            <li>Dashboard con analíticas</li>
-            <li>CRUD avanzado con permisos</li>
-            <li>Integración con email y logs</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card project dashboard-card" style="background:#1c2738;border:1px solid #2d3a4d;padding:22px;border-radius:12px;box-shadow:0 0 8px #0b1118;position:relative;" data-tech="javascript">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-          <h3 style="color:var(--accent);font-size:18px;">FIT LIFE — Landing App</h3>
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" style="width:38px;opacity:0.95;" />
-        </div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:12px;">Landing profesional con formulario, reseñas y animaciones responsivas.</p>
-
-        <div style="display:flex;gap:10px;margin-bottom:12px;">
-          <span class="badge">HTML</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">CSS</span>
-        </div>
-
-        <div style="background:#111a24;border:1px solid #232f3e;border-radius:10px;padding:10px;">
-          <p style="font-size:12px;color:var(--accent);">📊 Métricas:</p>
-          <ul style="font-size:12px;color:var(--muted);padding-left:18px;">
-            <li>100% responsive</li>
-            <li>Integración con API simulada</li>
-            <li>Tiempo de carga optimizado</li>
-          </ul>
-        </div>
-      </article>
-
+      </div>
     </div>
   </section>
 
-  <section id="contacto" class="card">
-    <h2>Contacto</h2>
-    <p>¿Te gustaría trabajar juntos?</p>
-    <p>Email: <span style="color:var(--accent)">ak.fischer@gmail.com</span></p>
-    <p>GitHub: <span style="color:var(--accent)">github.com/akfw.com</span></p>
-    <p>LinkedIn: <span style="color:var(--accent)">linkedin.com/in/anna.fischer</span></p>
+  <!-- Formulario de Suscripción -->
+  <section id="subscribe" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Suscríbete para recibir novedades</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="d-flex gap-2" role="form" novalidate>
+            <input type="email" class="form-control form-control-lg" placeholder="Correo electrónico" required aria-label="Correo electrónico" />
+            <button type="submit" class="btn btn-primary btn-lg">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© <span id="year"></span> — Portafolio Developer Edition</p>
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-0">&copy; 2025 FitLife. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white fs-4 me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white fs-4 me-3" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white fs-4 me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white fs-4" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const filters = document.querySelectorAll('.filter');
-  const projects = document.querySelectorAll('.project');
-
-  filters.forEach(btn => btn.addEventListener('click', ()=>{
-    document.querySelector('.filter.active').classList.remove('active');
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-
-    projects.forEach(p=>{
-      if(f==='all'){p.style.display='block';return}
-      const tech = p.dataset.tech.split(' ');
-      p.style.display = tech.includes(f) ? 'block' : 'none';
-    });
-  }));
-</script>
-
+  <!-- Bootstrap JS Bundle desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
